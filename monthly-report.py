@@ -119,7 +119,7 @@ def main():
 		context = ssl.create_default_context()
 		#
 		# Send off the message
-		with smtplib.SMTP(host=config['smtp']['server'], port=config['smtp']['port']) as s:
+		with smtplib.SMTP_SSL(host=config['smtp']['server'], port=config['smtp']['port']) as s:
 			if config['smtp']['starttls']:
 				s.ehlo()
 				try:
