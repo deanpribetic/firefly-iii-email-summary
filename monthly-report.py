@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3.7
+#!/usr/bin/env python3
 
 import yaml
 import sys
@@ -9,12 +9,16 @@ import re
 import bs4
 import ssl
 import smtplib
+import os
 
 from email.message import EmailMessage
 from email.headerregistry import Address
 from email.utils import make_msgid
 
 def main():
+	#
+	# Make the working path the same path as where our source is located
+	# os.chdir(os.path.dirname(sys.argv[0]))
 	#
 	# Load configuration
 	with open('config.yaml', 'r') as configFile:
