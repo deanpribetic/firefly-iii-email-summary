@@ -18,7 +18,7 @@ from email.utils import make_msgid
 def main():
 	#
 	# Make the working path the same path as where our source is located
-	# os.chdir(os.path.dirname(sys.argv[0]))
+	os.chdir(os.path.dirname(sys.argv[0]))
 	#
 	# Load configuration
 	with open('config.yaml', 'r') as configFile:
